@@ -1,0 +1,11 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Dilbert1!1",
+    "database": "bamazon",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql"
+  }
+ 
+}
