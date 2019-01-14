@@ -44,16 +44,21 @@ module.exports = function(app) {
 //  })
 
   // PUT route for updating authors
-  app.put('/api/stock/:id', function(req, res) {
+  app.put('/api/quantity/:id', function(req, res) {
+    console.log(req.body);
+    console.log(req.params.id);
     db.products.update(
-      req.body.stock_quantity,
+      {stock_quantity: req.body.stock_quantity},
+     
       {
         where: {
           id: req.params.id
         }
     }).then(function(qtyUpdate) {
+      console.log('Hello there' , qtyUpdate);
       res.json(qtyUpdate);
     }).catch(function(error) {
+      console.log('error side', error);
       res.json({ error: error });
     });
   });

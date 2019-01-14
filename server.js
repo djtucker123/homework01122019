@@ -16,24 +16,6 @@ const PORT = process.env.PORT || 8100;
 // Requiring our models for syncing
 const db = require('./models');
 
-
-// db.sequelize.sync().then(function(){
-//   db.products.find({
-//     where: {
-//       item_id: '6'
-//     }
-//   }).then(function(data){
-//     console.log('------------PRINTING DB DATA-----------------');
-//     console.log(JSON.stringify(data, null, 2));
-//     console.log(data.product_name, data.stock_quantity);
-//   });
-//   });
-
-
-
-
-
-
 // Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
