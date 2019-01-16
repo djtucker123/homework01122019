@@ -3,11 +3,8 @@
 let onHand;
 // retreive the inventory and render it to the screen in #inStock html class
 const renderInventory = function(dbStock){
-  //$('#articles').empty();   
-//  console.log('render was launched');
-//  console.log(dbStock);
+
 onHand = dbStock;
-//  console.log(onHand);
 
     $(document).ready(function() {
       $('#inStock').DataTable( {
@@ -30,8 +27,6 @@ retreiveInventory();
 const placeOrder = function(event){
   event.preventDefault();
 
-  const order = [];
-//  console.log(onHand);
   
 //console.log('submit is pressed.');
   // Save the shopper input in an object called 'order'

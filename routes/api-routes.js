@@ -18,30 +18,7 @@ module.exports = function(app) {
     });
   });
  
-// db.sequelize.sync().then(function(){
-//   db.products.find({
-//     where: {
-//       item_id: '6'
-//     }
-//   }).then(function(data){
-//     console.log('------------PRINTING DB DATA-----------------');
-//     console.log(JSON.stringify(data, null, 2));
-//     console.log(data.product_name, data.stock_quantity);
-//   });
-//   });
 
-
-
-// router.put(‘/book/:bookId’, function (req, res, next) {
-//   Book.update(
-//     {title: req.body.title},
-//     {returning: true, where: {id: req.params.bookId} }
-//   )
-//   .then(function([ rowsUpdate, [updatedBook] ]) {
-//     res.json(updatedBook)
-//   })
-//   .catch(next)
-//  })
 
   // PUT route for updating authors
   app.put('/api/quantity/:id', function(req, res) {
@@ -63,18 +40,3 @@ module.exports = function(app) {
     });
   });
 }
-// // PUT route for updating authors
-// app.put('/api/stock/:id', function(req, res) {
-//   db.products.update(
-//     req.body,
-//     {
-//       where: {
-//         id: req.params.id
-//       }
-//   }).then(function(dbAuthor) {
-//     res.json(dbAuthor);
-//   }).catch(function(error) {
-//     res.json({ error: error });
-//   });
-// });
-// }
