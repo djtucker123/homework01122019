@@ -9,7 +9,11 @@ module.exports = {
     dialect: "mysql"
   },
   production: {
-    "use_env_variable": "JAWSDB_URL",
+    username: process.env.U,
+    password: process.env.P,
+    database: process.env.D,
+    host: process.env.H,
+    port: 3306,
     dialect: "mysql"
   }
 };
